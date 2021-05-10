@@ -5,21 +5,12 @@ import java.util.Scanner;
 public class DesafioNumerosPares {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        int valor;
-        valor = entrada.nextInt();
-        int resultado = valor % 2;
+        int n;
+        n = entrada.nextInt();
 
-        if (resultado == 0) {
-            while (resultado == 0 || resultado < valor) {
-                resultado = resultado + 2;
-                System.out.println(resultado);
-            }
-        } else {
-            resultado = resultado - 1;
-            valor = valor - 1;
-            while (resultado == 0 || resultado < valor) {
-                resultado = resultado + 2;
-                System.out.println(resultado);
+        for (int i = 1; i <= n; i++ ) {
+            if (i % 2 == 0 && i <= n) {
+                System.out.println(i);
             }
         }
     }
