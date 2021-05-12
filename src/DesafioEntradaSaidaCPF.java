@@ -1,14 +1,16 @@
 import java.util.Scanner;
+import java.util.Locale;
 
 public class DesafioEntradaSaidaCPF {
     public static void main(String[] args) {
+        Locale.setDefault(new Locale("en", "US"));
         Scanner entrada = new Scanner(System.in);
-        String cpf;
-        cpf = entrada.nextLine();
 
-        System.out.println(cpf.substring(0, 3));
-        System.out.println(cpf.substring(4, 7));
-        System.out.println(cpf.substring(8, 11));
-        System.out.println(cpf.substring(12, 14));
+        String[] cpf = entrada.nextLine().split("\\.|-");
+
+        for (int i = 0; i < cpf.length; i++) {
+            System.out.printf("%s\n", cpf[i]);
+        }
+        entrada.close();
     }
 }
